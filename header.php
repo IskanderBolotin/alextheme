@@ -9,14 +9,16 @@
 </head>
 <body>
 <header>
-
-		<div class="container-fluid">
-			<div class="row">
-					<div class="col-md-3"><a href="#">Главная</a></div>
-					<div class="col-md-3"><a href="#">О нас</a></div>
-					<div class="col-md-3"><a href="#">Услуги</a></div>
-					<div class="col-md-3"><a href="#">Обратная связь</a></div>
-			</div>
-		</div>
-
+		<nav role="navigation" class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="#">Alexsite</a>
+				<?php
+					wp_nav_menu(array(
+						'theme_location' => 'primary',
+						'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+						'menu_class' => 'nav navbar-nav',
+						'menu_id' => '',
+						'depth' => 1
+					));
+				?>
+		</nav>
 </header>
