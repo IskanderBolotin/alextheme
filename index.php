@@ -2,13 +2,23 @@
 
 <section>
 	<div class="container-fluid">
-		<h4>Главная страницы темы создана</h4>
+		<h1 class="text-center">Главная страницы темы создана</h1>
 	</div>
 	<div class="container-fluid">
-		<a href="#"><img src="<?php bloginfo('template_url'); ?>/images/gnome_1.png" alt="gnome"/></a>
-		<p class="text-both">
-		Содержание моей темы. Небольшой текст описывающий тему.
-		</p>
+		<div class="row">
+			<div class="col-md-4">
+			</div>
+			
+			<div class="col-md-4">
+				<a href="#"><img src="<?php bloginfo('template_url'); ?>/images/gnome_1.png" alt="gnome"/></a>
+				<p class="text-both">
+				Содержание моей темы. Небольшой текст описывающий тему.
+				</p>
+			</div>
+			
+			<div class="col-md-4">
+			</div>
+		</div>
 	</div>
 </section>
 
@@ -21,5 +31,5 @@
 					<?php endwhile; ?>
 				<?php endif; ?>
 	</div>
-
+</section>
 <?php get_footer(); ?>
