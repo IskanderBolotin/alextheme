@@ -9,16 +9,17 @@
 </head>
 <body>
 <header>
-		<nav role="navigation" class="navbar navbar-expand-lg navbar-light bg-light">
-			<a class="navbar-brand" href="#">Alexsite</a>
 				<?php
 					wp_nav_menu(array(
 						'theme_location' => 'primary',
-						'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+						'container' => 'nav',
+						'container_class' => 'navbar navbar-expand-lg navbar-light bg-light',
+						'container_id'  => 'bs-example-navbar-collapse-1',
 						'menu_class' => 'nav navbar-nav',
 						'menu_id' => '',
-						'depth' => 1
+						'depth' => 1,
+						'fallback_cb' => 'wp_bootstrap_navwalker::fallback',
+						'walker' =>  new wp_bootstrap_navwalker()
 					));
 				?>
-		</nav>
 </header>
