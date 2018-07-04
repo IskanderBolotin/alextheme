@@ -13,6 +13,23 @@ function iskatheme_setup() {
 	load_theme_textdomain('iskatheme');
 	
 	add_theme_support('title-tag');
+	
+	add_theme_support('post-thumbnails');
+	set_post_thumbnail_size(700, 450);
+	
+	add_theme_support('html5', array(
+	'search-form',
+	'comment-form',
+	'comment-list',
+	'gallery',
+	'caption'));
+	
+	add_theme_support('post-formats', array(
+	'aside',
+	'image',
+	'video',
+	'gallery'
+	));
 		
 	register_nav_menu('primary', 'Primary menu');
 }
