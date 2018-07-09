@@ -13,11 +13,14 @@ Template Post Type: post, page, product
 			<div class ="col-md-4">
 			</div>
 			
-				<div class ="col-md-4">
+			<div class ="col-md-4">
+				
 					<div class="card">
+					<div class="container-fluid">
 						<?php if ( has_post_thumbnail()):?>
 							<div class="card-img-top"> <?php the_post_thumbnail();?></div>
 						<?php endif; ?>
+						
 							<div class="card-block text-xs-center">
 							<h4 class="card-title"><?php the_title(); ?> </h4>
 							<p class="card-text"><?php the_content(); ?> </p>
@@ -25,6 +28,7 @@ Template Post Type: post, page, product
 							</div>
 					</div>
 				</div>
+			</div>
 	</div>
 	</p>
 	<?php endwhile; ?>
