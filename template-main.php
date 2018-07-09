@@ -7,9 +7,9 @@ Template Post Type: post, page, product
 <?php get_header(); ?>
 	<?php 	$args = array( 'posts_per_page' => 10 ); ?>
 	<?php	$query = new WP_Query( $args ); ?>
-	<div class="card-deck-wrapper">
-		<div class="card-deck">
+	<div class="card-columns">
 			<?php	while ( $query->have_posts() ): $query->the_post(); ?>
+
 				<div class="card">
 				  <?php if ( has_post_thumbnail()):?>
 					<div class="card-img-top"> <?php the_post_thumbnail();?></div>
@@ -21,7 +21,6 @@ Template Post Type: post, page, product
 				  </div>
 				</div>
 			<?php endwhile; ?>
-		</div>
 	</div>
 <?php wp_reset_postdata(); ?>
 <?php get_footer(); ?>
